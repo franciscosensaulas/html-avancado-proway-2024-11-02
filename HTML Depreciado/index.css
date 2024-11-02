@@ -1,0 +1,83 @@
+.texto-centralizado {
+    text-align: center;
+}
+
+.texto-realce {
+    color: blue;
+    font-family: Arial;
+    font-size: 24px;
+}
+
+.marquee-container {
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee {
+    display: inline-block;
+    width: inherit;
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        text-indent: 100%;
+    }
+
+    100% {
+        text-indent: -100%;
+    }
+}
+
+table,
+tr,
+td,
+th {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+table thead tr {
+    background-color: blue;
+    color: white;
+}
+
+.coluna-codigo {
+    width: 100px;
+}
+
+.coluna-nome {
+    width: 300px;
+}
+
+.texto-negrito {
+    font-weight: bold;
+}
+
+.texto-sublinhado {
+    text-decoration: underline;
+}
+
+.logo-html5 {
+    margin-top: 12px;
+    width: 300px;
+}
+
+/* Trocar o background color das linhas pares*/
+tbody tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+/* Trocar o background color das linhas ímpares */
+tbody tr:nth-child(odd) {
+    background-color: lightskyblue;
+}
+
+thead tr th:nth-child(2):hover,
+tbody tr td:nth-child(2):hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
