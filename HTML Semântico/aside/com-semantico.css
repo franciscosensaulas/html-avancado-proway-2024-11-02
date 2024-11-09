@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+aside {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+aside ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+aside ul li:hover {
+    background-color: #575757;
+}
+
+.ocultar-items {
+    display: none;
+}
+
+.toggle-button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background-color: #575757;
+}

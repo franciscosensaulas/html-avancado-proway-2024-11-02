@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="com-semantico.css">
+</head>
+<body>
+    <aside>
+        <ul>
+            <li>
+                <button class="toggle-button" onclick="toggle('hardware')">Hardware</button>
+                <ul class="ocultar-items" id="hardware">
+                    <li>Coolors</li>
+                    <li>Fonte</li>
+                    <li>Memória RAM</li>
+                    <li>Placa de Vídeo</li>
+                    <li>Placa Mãe</li>
+                    <li>Processador</li>
+                </ul>
+            </li>
+            <li>
+                <button class="toggle-button" onclick="toggle('perifericos')">Periféricos</button>
+                <ul class="ocultar-items" id="perifericos">
+                    <li>Headset</li>
+                    <li>Teclado</li>
+                    <li>Mouse</li>
+                    <li>Monitor</li>
+                </ul>
+            </li>
+            <li>
+                <button class="toggle-button" onclick="toggle('tvs')">TVS</button>
+                <ul class="ocultar-items" id="tvs">
+                    <li>LG</li>
+                    <li>Samsung</li>
+                    <li>TCL</li>
+                    <li>Philco</li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <script src="aside.js"></script>
+</body>
+</html>
