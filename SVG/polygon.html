@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de polygon</title>
+</head>
+<body>
+    <h1>Exemplos de polígonos com SVG</h1>
+
+    <h2>1. Triângulo</h2>
+
+    <svg width="200" height="200" xlmns="http://www.w3.org/2000/svg">
+        <polygon points="50,150 150,150 100,50" style="fill: lightblue;stroke: black;stroke-width: 2;"/>
+    </svg>
+
+    <h2>2. Quadrado</h2>
+    <svg width="200" height="200" xlmns="http://www.w3.org/2000/svg">
+        <polygon points="50,50 150,50 150,150 50,150" style="fill: orange;stroke: black;stroke-width: 2;"/>
+    </svg>
+
+    <h2>3. Pentagono</h2>
+    <svg width="200" height="200" xlmns="http://www.w3.org/2000/svg">
+        <polygon points="100,20 180,80 150,160 50,160 20,80" style="fill: green;stroke: black;stroke-width: 2;"/>
+    </svg>
+
+    <h2>4. Estrela</h2>
+    <svg width="100" height="100" viewbox="0 0 24 24" xlmns="http://www.w3.org/2000/svg">
+        <polygon points="12,2 15,8 22,9 17,14 18,21 12,17 6,21 7,14 2,9 9,8" style="fill: #FFD700;stroke: black;stroke-width: 1;"/>
+    </svg>
+    <!--
+        viewbox define a área de visualização do SVG
+        Os quatro parâmetros são: min-x min-y width height
+        (0, 0) é origem canto superior
+        (24, 24) 24 de largura e 24 de altura
+    -->
+
+    <h2>5. Hexagono</h2>
+    <svg width="200" height="200" xlmns="http://www.w3.org/2000/svg">
+        <polygon points="100,20 180,60 180,140 100,180 20,140 20,60" style="fill: lightcoral;stroke: black;stroke-width: 2;"/>
+    </svg>
+
+    <h2>6. Losango</h2>
+    <svg width="200" height="200" xlmns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 95,50 50,95 5,50" style="fill: #FF4500;stroke: black;stroke-width: 2;"/>
+    </svg>
+</body>
+</html>
+
+<!-- 
+    - Criar um boneco de Palito utilizando SVG
+    - Criar uma réplica da bandeira da frança
+    - Criar uma réplica da bandeira do Brasil 
+        (sem as estrelas, no lugar da linha curvada do ordem e progresso, colocar uma linha reta)
+    
+ -->
