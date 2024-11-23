@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com acessibilidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portal com Acessibilidade</h1>
+        <!-- 
+            arial-label: Fornecer um nome acessível para um elemento.
+        -->
+        <nav>
+            <ul aria-label="Navegação principal">
+                <li>
+                    <a href="#sobre-nos">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#atributos">Atributos ARIA</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-nos">
+            <h2>Sobre</h2>
+            <p>Este conteúdo é sobre como usar os atributos ARIA para tornar os sites mais acessíveis</p>
+            <button id="open-modal" aria-haspopup="dialog" aria-controls="modal">Abrir Modal</button>
+        </section>
+        <section id="atributos" class="aria-list">
+            <h3>Atributos ARIA</h3>
+            <p>
+                <strong>O que é ARIA?</strong> ARIA (Acessible RICH Internet Applications) é uma especificação que define como tornar a web mais acessível para pessoas com deficiências. Ele fornece atributos adicionais para tornar a interação com elementos da página mais clara para tecnologias assistivas, como leitores de tela. O uso correto de ARIA melhora a navegação, facilita a compreensão de conteúdo dinâmico e contribui para uma experiência mais inclusiva na web.
+            </p>
+            <ul>
+                <li>
+                    <code>arial-label:</code>
+                    <span>Define um rótulo acessível para um elemento, útil quando o texto vísivel não é suficiente</span>
+                </li>
+                <li>
+                    <code>aria-hidden:</code>
+                    <span>Esconde um elemento da árvore acessível, informando aos leitores de tela para ignorá-lo.</span>
+                </li>
+                <li>
+                    <code>aria-required:</code>
+                    <span>Marca um campo de form como obrigatório, permitindo que leitores de tela avisem os usuários</span>
+                </li>
+                <li>
+                    <code>aria-expanded:</code>
+                    <span>Inidica o estado de expansão de um menu ou painel (true ou false)</span>
+                </li>
+                <li>
+                    <code>aria-disabled:</code>
+                    <span>Inidica que um elemento é desabilitado e não pode ser interagido.</span>
+                </li>
+                <li>
+                    <code>aria-describeby:</code>
+                    <span>Relaciona um elemento a um texto explicativo, geralmente usado para fornecer mais contexto para usuários de leitore de tela.</span>
+                </li>
+                <li>
+                    <code>aria-pressed:</code>
+                    <span> Informa se um botão ou controle de alternância está pressionado ou não.</span>
+                </li>
+                <li>
+                    <code>aria-live:</code>
+                    <span> Informa a prioridade de atualização dinâmica de uma região de conteúdo
+                        (exemplo: chat em tempo real).</span>
+                </li>
+                <li>
+                    <code>aria-current:</code>
+                    <span> Indica o item atual em uma lista ou navegação (exemplo: link ativo em um
+                        menu).</span>
+                </li>
+                <li>
+                    <code>aria-haspopup:</code>
+                    <span> Indica que um botão ou elemento pode abrir uma janela ou menu (exemplo:
+                        dropdown).</span>
+                </li>
+                <li>
+                    <code>role:</code>
+                    <span> o papel de um elemento na interface, como "dialog", "button",
+                        "navigation".</span>
+                </li>
+                <li>
+                    <code>aria-controls:</code>
+                    <span> Relaciona um elemento a outro que ele controla (como um botão que abre
+                        um modal).</span>
+                </li>
+                <li>
+                    <code>aria-live:</code>
+                    <span> Define a prioridade de atualização de conteúdo dinâmico, com valores como
+                        "polite", "assertive".</span>
+                </li>
+                <li>
+                    <code>aria-labelledby:</code>
+                    <span> Relaciona um elemento a outro que o descreve, geralmente utilizado em
+                        conjunto com títulos e descrições.</span>
+                </li>
+            </ul>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form action="https://localhost:5000/contato" aria-labelledby="form-title">
+                <h3 id="form-title" class="hidden">Formuário de Contato</h3>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="nome" aria-required="true" aria-describedby="name-help" required>
+                <span id="name-help" class="hidden">Digite seu nome completo.</span>
+
+
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" aria-required="true" aria-describedby="email-help" required>
+                <span id="email-help" class="hidden">Digite seu e-mail.</span>
+
+                <button type="submit" aria-pressed="false">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="modal-title">Título do Modal</h2>
+            <p>Conteúdo do modal.</p>
+            <button id="close-modal" arial-label="Fechar modal">Fechar</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
